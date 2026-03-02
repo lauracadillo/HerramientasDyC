@@ -71,7 +71,7 @@ header {
     text-transform: uppercase;
     color: var(--accent);
     font-weight: 500;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 
 h1 {
@@ -80,7 +80,6 @@ h1 {
     font-weight: 300;
     line-height: 1.1;
     color: var(--text);
-    margin-bottom: 12px;
 }
 
 h1 em {
@@ -300,4 +299,63 @@ footer {
 @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.3; }
+}
+
+/* ===== Selector de usuario ===== */
+
+.user-section {
+    margin-bottom: 48px;
+}
+
+.user-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.user-btn {
+    padding: 8px 18px;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 20px;
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.user-btn:hover {
+    background: var(--accent-dim);
+    border-color: rgba(1,157,244,0.4);
+    color: var(--accent);
+}
+
+.user-btn.active {
+    background: var(--accent-mid);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.user-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(1,157,244,0.15) 50%,
+        transparent 100%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+
+.user-btn:hover::after {
+    transform: translateX(100%);
 }
