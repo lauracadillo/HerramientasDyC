@@ -3,39 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herramientas - D&C</title>
+    <title>Instrucciones - D&C</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 <body>
     <script src="script.js"></script>
-    <div class="wrapper">
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+    </button>
 
+    <div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">Integratel Perú<br>Desempeño &amp; Calidad</div>
+        <nav class="sidebar-nav">
+            <a class="sidebar-link" href="index.html">
+                <span class="sl-left"><span class="sl-num">01</span>Herramientas</span>
+                <span class="sl-arrow">→</span>
+            </a>
+            
+            <a class="sidebar-link active" href="instrucciones.html">
+                <span class="sl-left"><span class="sl-num">03</span>Instrucciones</span>
+                <span class="sl-arrow">→</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">Herramientas<br>de análisis</div>
+    </aside>
+
+    <div class="wrapper">
         <header>
             <div class="eyebrow">Integratel Perú — Herramientas de análisis - Desempeño y Calidad</div>
-            <h1>Instucciones</h1>
+            <h1>Instrucciones</h1>
         </header>
 
-        <section>
-            Como agregar el enlace de una herramienta a la plantilla
-            <ol>
-                <li>Abrir el repositorio en github, se debe ver esta pantalla:</li>
-                <li>Hacer clic en index.html </li>
-                <li>Hacer clic en el botón del lápiz para editar el archivo</li>
-                <li>Buscar donde dice “a class="notebook-card" “ … y copiar toda la parte resaltada en la imagen (hasta “/a“) </li>
-                <li>Cambiar el enlace al nuevo script en donde dice “href”</li>
-                <li>Cambiar el texto dentro de ”class=”nb.name”” por el nombre del nuevo script que se agregara</li>
-                <li>Cambiar el texto dentro de  ”div class="nb-desc"” por la nueva descripción del script</li>
-                <li>Finalmente hacer clic en el botón “comit changes”  </li>
-                <li>Cambiar el mensaje por “se agrego script nuevo” y opcionalmente agregar una breve descripción</li>
-                <li>Finalmente, hacer clic de nuevo en commit changes</li>
+        <section class="instr-section">
+            <div class="category-header">
+                <span class="category-label">Cómo ejecutar los scripts</span>
+                <div class="category-line"></div>
+            </div>
+            <p class="instr-intro">Seguir estos pasos cada vez que se quiera ejecutar uno de los notebooks. </p>
+            <div class="step-list">
                 
-            </ol>
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <div class="step-body">
+                        <div class="step-title"> Seleccionar el perfil correcto</div>
+                        <div class="step-desc">Elegir su perfil (Laura / Julio / Lidia) en la página de Scripts antes de ejecutar. Esto ajusta automáticamente las rutas de archivo al usuario de Windows correspondiente.</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <div class="step-body">
+                        <div class="step-title">Abrir el notebook desde la página "Herramientas"</div>
+                        <div class="step-desc">Hacer clic en la tarjeta del script. Se abrirá directamente en VS Code. Si el navegador pide permiso, seleccionar <em>"Abrir"</em> y marcar <em>"Recordar mi elección"</em>.</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <div class="step-body">
+                        <div class="step-title">Actualizar las rutas de entrada si es necesario</div>
+                        <div class="step-desc">En la primera celda del notebook se encuentran las variables de configuración. Hay que asegurarse de que los nombres de los archivos Excel fuente coincidan con los que tienes en tu carpeta.</div>
+                        <div class="step-code"># Primera celda — variables de configuración
+ARCHIVO_ENTRADA = r"C:\Users\{usuario}\OneDrive - Integratel Perú\Datos\archivo.xlsx"
+MES             = "2025-05"   # ← cambia solo esto si es necesario</div>
+                        <div class="step-desc">Actualizar el mes con el actual para que los cálculos se realicen bien</div>
 
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">04</span>
+                    <div class="step-body">
+                        <div class="step-title">Ejecuta todas las celdas</div>
+                        <div class="step-desc">En VS Code usa el botón <em>"Run All"</em> en la parte superior del notebook.</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">05</span>
+                    <div class="step-body">
+                        <div class="step-title">Revisa el archivo de salida</div>
+                        <div class="step-desc">Al finalizar, el notebook genera un Excel de salida en la misma carpeta del script.</div>
+                        <div class="step-note">El nombre del archivo de salida incluye la fecha de ejecución automáticamente.</div>
+                    </div>
+                </div>
+            </div>
         </section>
-      
+
+        <section class="instr-section">
+            <div class="category-header">
+                <span class="category-label">Cómo agregar un nuevo script</span>
+                <div class="category-line"></div>
+            </div>
+            <div class="step-list">
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <div class="step-body">
+                        <div class="step-title">Abrir el repositorio en GitHub</div>
+                        <div class="step-desc">Se verá esta pantalla:</div>
+                        <img src="imagenes\paso1.png">
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <div class="step-body">
+                        <div class="step-title">Acceder al archivo de la página principal</div>
+                        <div class="step-desc"> Hacer clic en index.html </div>
+                        <img src="imagenes\paso2.png">
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <div class="step-body">
+                        <div class="step-title">Editar este archivo</div>
+                        <div class="step-desc"> Hacer clic en el botón del lápiz</div>
+                        <img src="imagenes\paso3.png">
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">04</span>
+                    <div class="step-body">
+                        <div class="step-title">Indentificar la ubicación de las tarjetas</div>
+                        <div class="step-desc">En la linea 28 se encuentra un bloque <code>&lt;a class="notebook-card"&gt;</code></div>
+                        <img src="imagenes\paso4.png">
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">05</span>
+                    <div class="step-body">
+                        <div class="step-title">Copiar una tarjeta existente y editar los datos</div>
+                        <div class="step-desc">Copiar el bloque <code>&lt;a class="notebook-card"&gt;</code> y pégalo debajo. Cambia el href, el ícono, el nombre y la descripción.</div>
+                        <div class="step-code">&lt;a class="notebook-card"
+   href="vscode://file/C:/Users/TU_USUARIO/OneDrive.../nuevo.ipynb"&gt;
+    &lt;div class="nb-icon"&gt;📋&lt;/div&gt;
+    &lt;div class="nb-content"&gt;
+        &lt;div class="nb-name"&gt;Nombre del script&lt;/div&gt;
+        &lt;div class="nb-desc"&gt;Descripción breve&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="nb-meta"&gt;&lt;span class="nb-tag"&gt;Ir al script&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="nb-arrow"&gt;→&lt;/div&gt;
+&lt;/a&gt;</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">06</span>
+                    <div class="step-body">
+                        <div class="step-title">Guardar los cambios</div>
+                        <div class="step-desc">Una vez que los cambios se realizaron con éxito, hacer clic en el botón commit changes</div>
+                        <img src="imagenes\paso8.png">
+
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">06</span>
+                    <div class="step-body">
+                        <div class="step-title">Terminar de guardar los cambios</div>
+                        <div class="step-desc">Agregar un breve mensaje sobre los cambios que se realizaron y volver a hacer clic en el botón commit changes.</div>
+                        <img src="imagenes\paso10.png" height="300px">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--
+        <section class="instr-section">
+            <div class="category-header">
+                <span class="category-label">Preguntas frecuentes</span>
+                <div class="category-line"></div>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">El link no abre VS Code</div>
+                    <div class="faq-a">Asegúrate de tener VS Code instalado y de haber abierto al menos un archivo .ipynb anteriormente para que el protocolo <code>vscode://</code> quede registrado en Windows.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">El notebook lanza error "FileNotFoundError"</div>
+                    <div class="faq-a">El archivo Excel de entrada no se encuentra en la ruta configurada. Verifica que OneDrive esté sincronizado y que el nombre del archivo coincida exactamente con el valor en la variable <code>ARCHIVO_ENTRADA</code>.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">No aparece el entorno Python correcto en VS Code</div>
+                    <div class="faq-a">Haz clic en el nombre del kernel en la esquina superior derecha del notebook. Selecciona el entorno que contenga las librerías instaladas, normalmente <code>Python 3.x.x ('base')</code>.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">¿Con qué frecuencia debo ejecutar los scripts?</div>
+                    <div class="faq-a">Los scripts de <em>Notificar FLMs</em> y <em>Último MP/MC registrado</em> se recomiendan semanalmente (lunes). El script de <em>Base de sitios con especialidades</em> se ejecuta una vez al mes, al cierre de cada periodo.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">¿Puedo ejecutar los scripts desde casa?</div>
+                    <div class="faq-a">Sí, siempre que tengas acceso a OneDrive (con internet o en modo sin conexión si los archivos están disponibles offline). Los archivos de salida también se guardarán en OneDrive.</div>
+                </div>
+            </div>
+        </section>
+-->
     </div>
+
+
 </body>
 </html>
-

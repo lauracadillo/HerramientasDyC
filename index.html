@@ -6,9 +6,32 @@
     <title>Herramientas - D&C</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 <body>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+    </button>
+
+    <div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">Integratel Perú<br>Desempeño &amp; Calidad</div>
+        <nav class="sidebar-nav">
+            <a class="sidebar-link active" href="index.html">
+                <span class="sl-left"><span class="sl-num">01</span>Herramientas</span>
+                <span class="sl-arrow">→</span>
+            </a>
+            
+            <a class="sidebar-link" href="instrucciones.html">
+                <span class="sl-left"><span class="sl-num">03</span>Instrucciones</span>
+                <span class="sl-arrow">→</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">Herramientas<br>de análisis</div>
+    </aside>
+
     <script src="script.js"></script>
     <div class="wrapper">
 
@@ -19,37 +42,29 @@
 
         <section class="user-section">
             <div class="eyebrow">Selecciona tu perfil;</div>
-
             <div class="user-buttons">
                 <button class="user-btn" onclick="cambiarUsuario('lcadillom')">Laura</button>
                 <button class="user-btn" onclick="cambiarUsuario('jlopezh')">Julio</button>
                 <button class="user-btn" onclick="cambiarUsuario('...')">Lidia</button>
             </div>
         </section>
- 
-        <!-- CATEGORÍA 1: Mantenimiento Preventivo -->
-        <!-- Agregar "como modificar la pagina" -->
+
         <section class="category">
             <div class="category-header">
                 <span class="category-label">Mantenimiento Preventivo</span>
                 <div class="category-line"></div>
             </div>
             <div class="notebooks">
-                <a class="notebook-card"
-                   href="vscode://file/C:/Users/lcadillom/OneDrive - Integratel Per%C3%BA/Proyectos/Base de sitios con especialidades/sitiosIncompletos.ipynb"
-                   target="_blank">
+                <a class="notebook-card" href="vscode://file/C:/Users/lcadillom/OneDrive - Integratel Per%C3%BA/Proyectos/Base de sitios con especialidades/sitiosIncompletos.ipynb" target="_blank">
                     <div class="nb-icon">🔔</div>
                     <div class="nb-content">
                         <div class="nb-name">Notificar FLMs</div>
-                        <div class="nb-desc">Lista sitios con mantenimiento incompleto +5días </div>
+                        <div class="nb-desc">Lista sitios con mantenimiento incompleto +5días</div>
                     </div>
                     <div class="nb-meta"><span class="nb-tag">Ir al script</span></div>
                     <div class="nb-arrow">→</div>
                 </a>
-
-                <a class="notebook-card"
-                   href="vscode://file/C:/Users/lcadillom/OneDrive - Integratel Per%C3%BA/Proyectos/Base de sitios con especialidades/revisionEspecialidades.ipynb"
-                   target="_blank">
+                <a class="notebook-card" href="vscode://file/C:/Users/lcadillom/OneDrive - Integratel Per%C3%BA/Proyectos/Base de sitios con especialidades/revisionEspecialidades.ipynb" target="_blank">
                     <div class="nb-icon">🗂️</div>
                     <div class="nb-content">
                         <div class="nb-name">Base de sitios con especialidades</div>
@@ -58,30 +73,25 @@
                     <div class="nb-meta"><span class="nb-tag">Ir al script</span></div>
                     <div class="nb-arrow">→</div>
                 </a>
-
-                
-                <a class="notebook-card"href="vscode://file/C:/Users/lcadillom/OneDrive - Integratel Per%C3%BA/Proyectos/Base de sitios con especialidades/ultimoPreventivo.ipynb" target="_blank">
+                <a class="notebook-card" href="vscode://file/C:/Users/lcadillom/OneDrive - Integratel Per%C3%BA/Proyectos/Base de sitios con especialidades/ultimoPreventivo.ipynb" target="_blank">
                     <div class="nb-icon">🗂️</div>
                     <div class="nb-content">
                         <div class="nb-name">Último MP registrado</div>
-                        <div class="nb-desc">calcula el último MP registrado para todos los sitios de la base de sitios</div>
+                        <div class="nb-desc">Calcula el último MP registrado para todos los sitios de la base de sitios</div>
                     </div>
                     <div class="nb-meta"><span class="nb-tag">Ir al script</span></div>
                     <div class="nb-arrow">→</div>
                 </a>
-               
             </div>
         </section>
 
-        <!-- CATEGORÍA 2: Mantenimiento Correctivo -->
         <section class="category">
             <div class="category-header">
                 <span class="category-label">Mantenimiento Correctivo</span>
                 <div class="category-line"></div>
             </div>
             <div class="notebooks">
-                <!-- Agrega notebooks de Mantenimiento aquí -->
-                <a class="notebook-card" href="vscode://file/C:/Users/lcadillom/OneDrive - Integratel Per%C3%BA/Proyectos/Base de sitios con especialidades/revisionCorrectivo.ipynb" ">
+                <a class="notebook-card" href="vscode://file/C:/Users/lcadillom/OneDrive - Integratel Per%C3%BA/Proyectos/Base de sitios con especialidades/revisionCorrectivo.ipynb">
                     <div class="nb-icon">⚙️</div>
                     <div class="nb-content">
                         <div class="nb-name">Último MC registrado</div>
@@ -93,26 +103,10 @@
             </div>
         </section>
 
-        <!-- CATEGORÍA 3: Reportes 
-        <section class="category">
-            <div class="category-header">
-                <span class="category-label">Reportes</span>
-                <div class="category-line"></div>
-            </div>
-            <div class="notebooks">
-                <a class="notebook-card" href="#" style="pointer-events:none; opacity:0.4;">
-                    <div class="nb-icon">📊</div>
-                    <div class="nb-content">
-                        <div class="nb-name">— próximamente —</div>
-                        <div class="nb-desc">Notebooks de reportes en preparación</div>
-                    </div>
-                    <div class="nb-meta"><span class="nb-tag">pendiente</span></div>
-                    <div class="nb-arrow">→</div>
-                </a>
-            </div>
-        </section>
-        -->
-      
     </div>
+
+    <script>
+        
+    </script>
 </body>
 </html>
