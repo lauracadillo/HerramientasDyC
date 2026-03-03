@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisitos</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <script src="script.js"></script>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+    </button>
+
+    <div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">Integratel Perú<br>Desempeño &amp; Calidad</div>
+        <nav class="sidebar-nav">
+            <a class="sidebar-link" href="index.html">
+                <span class="sl-left"><span class="sl-num">01</span>Herramientas</span>
+                <span class="sl-arrow">→</span>
+            </a>
+            
+            <a class="sidebar-link" href="instrucciones.html">
+                <span class="sl-left"><span class="sl-num">02</span>Instrucciones</span>
+                <span class="sl-arrow">→</span>
+            </a>
+            <a class="sidebar-link active" href="requisitos.html">
+                <span class="sl-left"><span class="sl-num">03</span>Requisitos</span>
+                <span class="sl-arrow">→</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">Herramientas<br>de análisis</div>
+    </aside>
+
+    <div class="wrapper">
+        <header>
+            <div class="eyebrow">Integratel Perú — Herramientas de análisis - Desempeño y Calidad</div>
+            <h1>Requisitos</h1>
+        </header>
+
+        <section class="instr-section">
+            <div class="category-header">
+                <span class="category-label">Pasos previos al funcionamiento de esta página </span>
+                <div class="category-line"></div>
+            </div>
+            <p class="instr-intro">Requisitos para poder ejecutar los scripts de esta página sin problemas. </p>
+            <div class="step-list">
+                
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <div class="step-body">
+                        <div class="step-title"> Instalar Visual Studio Code desde el centro de software</div>
+                        <img src="imagenes\req1.png " height=300px>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <div class="step-body">
+                        <div class="step-title"> Instalar Python desde el centro de software</div>
+                        <img src="imagenes\req2.png "height=300px>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <div class="step-body">
+                        <div class="step-title">Abrir "Windows PowerShell"</div>
+                        <img src="imagenes\req3.png " height=100px>
+
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">04</span>
+                    <div class="step-body">
+                        <div class="step-title">Instalar paquetes necesarios</div>
+                        <div class="step-desc">Copiar <em>una por una</em> las siguientes lineas en la consola para su ejecucion. </div>
+                        <div class="step-code">pip install pandas </div>
+                        <div class="step-code">pip install openpyxl </div>
+                        <div class="step-code">pip install numpy </div>
+                        <div class="step-code">pip install tabulate </div>
+                        <div class="step-code">pip install pywin32 </div>
+                        <img src="imagenes\req4.png " height=300px>
+                    </div>
+
+                </div>
+                <div class="step">
+                    <span class="step-num">04</span>
+                    <div class="step-body">
+                        <div class="step-title">Ejecuta todas las celdas</div>
+                        <div class="step-desc">En VS Code usa el botón <em>"Run All"</em> en la parte superior del notebook.</div>
+                    </div>
+                </div>
+    </div>
+</body>
+</html>
