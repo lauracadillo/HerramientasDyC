@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herramientas - D&C</title>
+    <title>Más proyectos - D&C</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
@@ -19,7 +19,7 @@
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-brand">Integratel Perú<br>Desempeño &amp; Calidad</div>
         <nav class="sidebar-nav">
-            <a class="sidebar-link active" href="index.html">
+            <a class="sidebar-link" href="index.html">
                 <span class="sl-left"><span class="sl-num">01</span>Herramientas</span>
                 <span class="sl-arrow">→</span>
             </a>
@@ -32,7 +32,7 @@
                 <span class="sl-left"><span class="sl-num">03</span>Requisitos</span>
                 <span class="sl-arrow">→</span>
             </a>
-            <a class="sidebar-link " href="otrosProyectos.html">
+            <a class="sidebar-link active" href="otrosProyectos.html">
                 <span class="sl-left"><span class="sl-num">04</span>Otros Proyectos</span>
                 <span class="sl-arrow">→</span>
             </a>
@@ -45,7 +45,7 @@
 
         <header>
             <div class="eyebrow">Integratel Perú — Herramientas de análisis - Desempeño y Calidad</div>
-            <h1>Herramientas</h1>
+            <h1>Otros Proyectos</h1>
         </header>
 
         <section class="user-section">
@@ -59,55 +59,48 @@
 
         <section class="category">
             <div class="category-header">
-                <span class="category-label">Mantenimiento Preventivo</span>
+                <span class="category-label">Mantenimiento Correctivo</span>
                 <div class="category-line"></div>
             </div>
             <div class="notebooks"> 
                 <a class="notebook-card" href="vscode://file/C:/Users/lcadillom/OneDrive - Integratel Per%C3%BA/1_Compartido_KPI/Scripts/sitiosIncompletos.ipynb" target="_blank">
-                    <div class="nb-icon">🔔</div>
+                    <div class="nb-icon">⛽</div>
                     <div class="nb-content">
-                        <div class="nb-name">Notificar FLMs</div>
-                        <div class="nb-desc">Lista sitios con mantenimiento incompleto +5días</div>
+                        <div class="nb-name">Verificación PLMs</div>
+                        <div class="nb-desc">Script que verifica si un ticket PLM se asigno al mismo sitio que un CM en un rango horario parecido. <br> 
+                        <em style="font-weight: bold; font-style: normal;">Entrada: </em> Descargable de autin de la fecha deseada (CM y PLM) <br>
+                        <em style="font-weight: bold; font-style: normal;">Salida: </em> un archivo combinado donde a cada CM que corresponda se le asignará el PLM correspondiente 
+                        </div>
                     </div>
                     <div class="nb-meta"><span class="nb-tag">Ir al script</span></div>
                     <div class="nb-arrow">→</div>
                 </a>
-                <a class="notebook-card" href="vscode://file/C:/Users/lcadillom/OneDrive - Integratel Per%C3%BA/1_Compartido_KPI/Scripts/revisionEspecialidades.ipynb" target="_blank">
-                    <div class="nb-icon">🗂️</div>
+                <a class="notebook-card" href="vscode://file/C:/Users/lcadillom/OneDrive - Integratel Per%C3%BA/1_Compartido_KPI/Scripts/sitiosIncompletos.ipynb" target="_blank">
+                    <div class="nb-icon">🔁</div>
                     <div class="nb-content">
-                        <div class="nb-name">Base de sitios con especialidades</div>
-                        <div class="nb-desc">Actualiza la base de sitios con promedio de especialidades ejecutadas los meses anteriores</div>
+                        <div class="nb-name">Verificación Reiteradas</div>
+                        <div class="nb-desc">Script que compara las alarmas de los tickets en el rango dado para definir posibles reiteradas  <br> 
+                        <em style="font-weight: bold; font-style: normal;">Entrada: </em> Archivo de revision de reiteradas <br>
+                        <em style="font-weight: bold; font-style: normal;">Salida: </em> Archivo con columna extra que relaciona las posibles reiteradas relacionadas + texto de color rojo para su fácil indentificación 
+                        </div>
                     </div>
                     <div class="nb-meta"><span class="nb-tag">Ir al script</span></div>
                     <div class="nb-arrow">→</div>
                 </a>
-                <a class="notebook-card" href="vscode://file/C:/Users/lcadillom/OneDrive - Integratel Per%C3%BA/1_Compartido_KPI/Scripts/ultimoPreventivo.ipynb" target="_blank">
-                    <div class="nb-icon">🗂️</div>
-                    <div class="nb-content">
-                        <div class="nb-name">Último MP registrado</div>
-                        <div class="nb-desc">Calcula el último MP registrado para todos los sitios de la base de sitios</div>
-                    </div>
-                    <div class="nb-meta"><span class="nb-tag">Ir al script</span></div>
-                    <div class="nb-arrow">→</div>
-                </a>
+                
             </div>
         </section>
 
         <section class="category">
             <div class="category-header">
-                <span class="category-label">Mantenimiento Correctivo</span>
+                <span class="category-label">Mantenimiento Preventivo</span>
                 <div class="category-line"></div>
             </div>
             <div class="notebooks">
-                <a class="notebook-card" href="vscode://file/C:/Users/lcadillom/OneDrive - Integratel Per%C3%BA/1_Compartido_KPI/Scripts/revisionCorrectivo.ipynb">
-                    <div class="nb-icon">⚙️</div>
-                    <div class="nb-content">
-                        <div class="nb-name">Último MC registrado</div>
-                        <div class="nb-desc">Calcula el último MC registrado para todos los sitios en la base de sitios + cantidad de MC que tuvo este sitio</div>
-                    </div>
-                    <div class="nb-meta"><span class="nb-tag">Ir al script</span></div>
-                    <div class="nb-arrow">→</div>
-                </a>
+                
+                <!-- AGREGAR FUTUROS PROYECTOS AQUI  -->
+
+
             </div>
         </section>
 

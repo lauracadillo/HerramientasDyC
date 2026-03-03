@@ -214,7 +214,7 @@ h1 em {
 }
 
 .nb-name {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--text);
     white-space: nowrap;
@@ -229,7 +229,7 @@ h1 em {
 }
 
 .nb-desc {
-    font-size: 11px;
+    font-size: 13px;
     color: var(--text-muted);
     margin-top: 3px;
     white-space: nowrap;
@@ -524,3 +524,4 @@ footer {
 .faq-item.open .faq-q::after { transform: rotate(45deg); }
 .faq-a { font-family: 'DM Mono', monospace; font-size: 0.73rem; font-weight: 300; color: #888; line-height: 1.75; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
 .faq-item.open .faq-a { max-height: 300px; padding-bottom: 1rem; }
+
